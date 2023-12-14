@@ -38,3 +38,14 @@ const winningCombos = [ // This function is for defining the different possible 
     [0,4,8],
     [2,4,6]
 ]
+
+function playerHasWon() {
+    for (const conditional of winningCombos) {
+        let [a, b, c] = conditional
+
+        if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
+            return [a,b,c]
+        }
+    }
+    return false
+}
