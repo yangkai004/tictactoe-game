@@ -18,7 +18,12 @@ function boxClicked(e) { // the parameter is representing the  event but can als
     if(!spaces[id]){ // This line is checking if the space in the "spaces" array at the index "id"(which corresponds to the box that was clicked) is empty('null'). the not(!) operator here means "if the space is not already filled".
         spaces[id] = currentPlayer // if the clicked box is indeed empty, this line sets the value in the 'spaces' array at the index 'id' to the symbol of the current player ('X' or 'O'). 
         e.target.innerText = currentPlayer // This line of code accesess the html element and let currentPlayer sets its value of either 'X' or 'O'.
+        let winning_blocks = playerHasWon(); // created a variable and assaigned it the value of playerHasWon() function
         if(playerHasWon() !==false){
             playerText.innerHTML = `Player ${currentPlayer} has won!` // This sets a message of the player winning at the top where the TicTactoe game was .
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator); // This line of code is for highlighting the the winning combo .
             return // When a player wins the function exits early using return statement to prevent further exectution 
+        }
+        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT // if no player has won yet this line toggles the player to the next players turnfor the next movee it switches from "X" or "O"
+    }
+}
