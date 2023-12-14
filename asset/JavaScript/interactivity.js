@@ -49,3 +49,15 @@ function playerHasWon() {
     }
     return false
 }
+restartBtn.addEventListener('click', restartGame); // This for the new round button.
+function restartGame() { // This function is for starting a new round.
+    spaces.fill(null); // This makes all 9 array items to value of null which is empty
+
+    boxes.forEach(box => {
+        box.innerText = '';
+        box.style.backgroundColor = '';
+    });
+
+    playerText.innerHTML = 'Tic Tac Toe';
+
+}
