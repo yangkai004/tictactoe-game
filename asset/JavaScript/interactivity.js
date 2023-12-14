@@ -22,9 +22,20 @@ function boxClicked(e) { // the parameter is representing the  event but can als
         if(playerHasWon() !==false){
             playerText.innerHTML = `Player ${currentPlayer} has won!` // This sets a message of the player winning at the top where the TicTactoe game was .
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator); // This line of code is for highlighting the the winning combo .
+            updateScores(currentPlayer); // This is for calling the updateScores function after the game has been won
             return // When a player wins the function exits early using return statement to prevent further exectution 
         }
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT // if no player has won yet this line toggles the player to the next players turnfor the next movee it switches from "X" or "O"
+    }
+}
+
+function updateScores(winning_blocks) { // function is for the scores and making it go up for either if plyer 'X' or 'O' has won  and then increments the score based on the winner.
+    if (winning_blocks  === "X") {
+        playerXScore++;
+        document.getElementById("playerXScore").innerText = playerXScore;
+    } else if (winning_blocks === "O") {
+        playerOScore++;
+        document.getElementById("playerOScore").innerText = playerOScore;
     }
 }
 
