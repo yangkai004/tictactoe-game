@@ -5,3 +5,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #0f8120;
+}
