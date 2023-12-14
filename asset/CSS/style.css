@@ -77,3 +77,19 @@ button:hover {
     cursor: pointer;
     transform: translate(-2px);
 }
+#restartBtn {
+    margin-top: 50px;
+ }
+ 
+#restartBtn {
+   margin-top: 50px;
+}
+
+#score {
+    margin-top: 50px;
+}
+p {
+    margin: 10px;
+    color: #19cc34;
+    font-size: larger;
+}
