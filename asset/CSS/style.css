@@ -9,3 +9,11 @@
 :root {
     --winning-blocks: #0f8120;
 }
+body {
+    background-color: #062223; /* Set body background color */
+    color: #0d585c;
+    font-family: Arial, sans-serif;
+    margin: 0; /* this is for removing default margin */
+    padding: 0; /* this is for removing default padding */
+    font-family: "Rubik Distressed",sans-serif;
+}
