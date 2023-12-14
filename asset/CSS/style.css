@@ -53,4 +53,17 @@ h1 {
 .box:hover {
     color:limegreen;
     opacity: 0.75;
+}button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color:#19cc34;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    transform: translate(-2px);
 }
