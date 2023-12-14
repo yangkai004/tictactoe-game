@@ -9,3 +9,6 @@ let playerXScore = 0;
 let playerOScore = 0;
 let currentPlayer = X_TEXT;
 let spaces = Array(9).fill(null)// This line of code creates an array named spaces with a length of 9, representing the tictactoe grid the fill (null) method is used to initialize all the elements in this array with the value null.
+const suiii = () => {
+    boxes.forEach(box => box.addEventListener('click', boxClicked));
+}
