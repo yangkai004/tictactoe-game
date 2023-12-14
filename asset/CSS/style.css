@@ -17,3 +17,16 @@ body {
     padding: 0; /* this is for removing default padding */
     font-family: "Rubik Distressed",sans-serif;
 }
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    color: limegreen;
+}
+
+.gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
