@@ -30,3 +30,27 @@ h1 {
     flex-wrap: wrap;
     margin-top: 40px;
 }
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: limegreen;
+    font-size: 100px;
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    font-family: "Rubik Distressed",sans-serif;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+
+.box:hover {
+    color:limegreen;
+    opacity: 0.75;
+}
