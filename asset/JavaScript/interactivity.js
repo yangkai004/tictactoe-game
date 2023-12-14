@@ -8,10 +8,11 @@ const X_TEXT = "X";
 let playerXScore = 0; 
 let playerOScore = 0;
 let currentPlayer = X_TEXT;
+
 let spaces = Array(9).fill(null)// This line of code creates an array named spaces with a length of 9, representing the tictactoe grid the fill (null) method is used to initialize all the elements in this array with the value null.
 const suiii = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked));
-} 
+}
 function boxClicked(e) { // the parameter is representing the  event but can also be written in any way like evt,et and etc as a parameter but i just chose to put e.
     const id = e.target.id //e: It's a parameter representing an event, like a click, e.target: This refers to the element that triggered the event, in this case, the specific box that was clicked e.target.id: The id property retrieves the unique identifier (ID) of the clicked element. So, const id = e.target.id; is essentially grabbing the ID of the element that was clicked.
 
@@ -23,12 +24,12 @@ function boxClicked(e) { // the parameter is representing the  event but can als
             playerText.innerHTML = `Player ${currentPlayer} has won!` // This sets a message of the player winning at the top where the TicTactoe game was .
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator); // This line of code is for highlighting the the winning combo .
             updateScores(currentPlayer); // This is for calling the updateScores function after the game has been won
-            return // When a player wins the function exits early using return statement to prevent further exectution 
+            boxes.forEach(box => box.removeEventListener('click', boxClicked)); // This is for making no more values to be inserted into the boxes after the game has been won took me a while to figure out.
+            return  //When a player wins the function exits early using return statement to prevent further exectution 
         }
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT // if no player has won yet this line toggles the player to the next players turnfor the next movee it switches from "X" or "O"
     }
 }
-
 function updateScores(winning_blocks) { // function is for the scores and making it go up for either if plyer 'X' or 'O' has won  and then increments the score based on the winner.
     if (winning_blocks  === "X") {
         playerXScore++;
@@ -60,15 +61,31 @@ function playerHasWon() {
     }
     return false
 }
+
 restartBtn.addEventListener('click', restartGame); // This for the new round button.
+newGameBtn.addEventListener('click', newGame); // This is for the new game button.
+
 function restartGame() { // This function is for starting a new round.
     spaces.fill(null); // This makes all 9 array items to value of null which is empty
 
     boxes.forEach(box => {
         box.innerText = '';
         box.style.backgroundColor = '';
+        box.addEventListener('click', boxClicked); // This is for Re-enabling event listeners for boxes after a new round has started.
     });
 
     playerText.innerHTML = 'Tic Tac Toe';
 
 }
+
+
+function newGame() { // This function is for starting a new game. 
+    restartGame(); // Resetting the game using the restart function.
+
+    // Resetting scores for a new game
+    playerXScore = 0;
+    playerOScore = 0;
+    document.getElementById("playerXScore").innerText = playerXScore;
+    document.getElementById("playerOScore").innerText = playerOScore;
+}
+suiii() // This function is called after the variables and functions are defined. it sets up the event listners on the boxes, allowing the game to respond when a box is clicked. .startGame() is a trigger to set up process for the game logic and interactivity each time the script runs or the html page is loaded. It is put at the end of the page and called after the boxClicked function and after all the different conditions, functions, iterations and etc have been defined, startGame() contains critical setup functions or event listeners necessary for the game's functionilty calling it at the end of the script ensures that these setup actions are excuted when the page loads or when the script is run.
