@@ -18,6 +18,16 @@ body {
     font-family: "Rubik Distressed",sans-serif;
 }
 
+.container {
+    padding: 20px;
+    min-height: 100vh; /* this baisically ensures the container fills the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #062223; /* This match the body background color */
+}
+
 h1 {
     font-size: 54px;
     text-transform: uppercase;
