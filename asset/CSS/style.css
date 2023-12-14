@@ -10,7 +10,7 @@
     --winning-blocks: #0f8120;
 }
 body {
-    background-color: #062223; /* Set body background color */
+    background-color: #062223; /* this is to set body background color */
     color: #0d585c;
     font-family: Arial, sans-serif;
     margin: 0; /* this is for removing default margin */
