@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/play_game.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* this ensure the image covers the entire viewport */
+    background-position: center; /* this centers the image within the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width:100vw;
+    margin: 0; /* Reset default body margin */
+}
+#playGamebutton {
+    padding: 10px 20px; /* Adjust padding using percentages */
+    font-size: 5vw; /* Adjust font size using viewport width units */
+    background-color: #19cc34;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20vh;
+}
+#playGamebutton:hover {
+    transform: translateY(-2px);
+}
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and  (min-width: 768px) {
+    #playGamebutton {
+      font-size: 4vw;            
+    }
+
+}
+@media screen and  (min-width: 1440px) {
+    #playGamebutton {
+      font-size: 3vw;       
+      padding:1rem;     
+    }
+}
