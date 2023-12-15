@@ -88,8 +88,25 @@ button:hover {
 #score {
     margin-top: 50px;
 }
+
 p {
     margin: 10px;
     color: #19cc34;
     font-size: larger;
+}
+@media  screen and  (min-width: 768px){
+    #score {
+        display: flex;
+        justify-content: space-between;
+    }
+    p {
+       padding: 50px;
+    }
+}
+
+
+@media  screen and  (max-width: 424px){
+     p {
+       padding: 50px;
+    }
 }
