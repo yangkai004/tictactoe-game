@@ -63,7 +63,9 @@ h1 {
 .box:hover {
     color:limegreen;
     opacity: 0.75;
-}button {
+} 
+
+button {
     padding: 10px 20px;
     border-radius: 10px;
     background-color:#19cc34;
