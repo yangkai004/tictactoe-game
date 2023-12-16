@@ -17,6 +17,7 @@ tictactoe game using HTML, CSS and JavaScript
   - [Score for Player X and O](#score-for-player-x-and-o)
   - [New Round](#new-round)
   - [New Game](#new-game)
+  - [TicTacToe Game Page](#This-How-The-TicTacToe-Game-Page-Looks-Like)
 - [Issues and Challenges](#issues-and-challenges)
 - [Performance Testing - Lighthouse Results](#performance-testing---lighthouse-results)
 - [Credits](#credits)
