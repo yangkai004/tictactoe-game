@@ -39,7 +39,7 @@ My target audience primarily includes individuals interested in playing the clas
 
 ## Wireframe
 ![wireframe design](asset/wireframe/tictactoe_wireframe.jpg)
-
+[THIS IS THE LIVE LINK TO THE GAME](https://yangkai004.github.io/tictactoe-game/)
 ---
 
 ## play Game page
@@ -93,9 +93,8 @@ So as you can see from here the mobile view look like its not showing the full i
 ## issues and challenges
 When it comes to issues and challenges i had faced were not major i had managed to fix them but 1 issue i had was fixing the responsiveness side if you go up you can see on the play game page's background image when its mobile size or its not showing the full image thats something i couldnt fix no matter how many ways i tried to do it in css.
 
----
 
-Another was the responsiveness of the game area section like the grid layout i had set when ever i tried changing the size for different viewport's or it would change the shape of the layout for the game i had set i tried many ways but couldnt come up with anything but its unresponsiveness is not bad it looks ok down to devices which have a vw of 320px.
+Another was the responsiveness of the game area section like the grid layout of the boxes i had set when ever i tried changing the size for different viewport's it would change the shape of the layout for the game i had set i tried many different methods of maing it responsove but couldnt come up with anything but its unresponsiveness is not bad it looks ok down to devices which have a vw of 320px.
 
 ## Performance Testing - Lighthouse Results
 - play game page
